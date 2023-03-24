@@ -1,0 +1,23 @@
+@use "styles/mixins" as *;
+
+.root {
+	width: remsize(45);
+	height: remsize(45);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	svg {
+		width: remsize(24);
+		height: remsize(24);
+	}
+}
+
+.text {
+	position: absolute;
+	font-size: remsize(10);
+	font-weight: bold;
+	bottom: remsize(12);
+}

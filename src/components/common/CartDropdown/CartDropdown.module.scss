@@ -1,0 +1,46 @@
+@use "styles/mixins" as *;
+@use "styles/colors" as *;
+@use "styles/media" as *;
+
+.root {
+	position: absolute;
+	width: remsize(260);
+	height: remsize(340);
+	display: flex;
+	flex-direction: column;
+	padding: remsize(20);
+	border: 1px solid $black;
+	background-color: $white;
+	top: remsize(90);
+	right: remsize(40);
+	z-index: 5;
+
+	@include tabletS {
+		right: remsize(18);
+	}
+
+	@include mobileM {
+		width: remsize(285);
+		height: remsize(500);
+	}
+}
+
+.btn {
+	margin-top: auto;
+}
+
+.text {
+	font-size: remsize(18);
+	margin: remsize(50) auto;
+}
+
+.container {
+	height: remsize(240);
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+
+	@include mobileM {
+		height: remsize(500);
+	}
+}

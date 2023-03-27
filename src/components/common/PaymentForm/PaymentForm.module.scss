@@ -1,0 +1,36 @@
+@use "styles/mixins" as *;
+@use "styles/colors" as *;
+@use "styles/media" as *;
+
+.root {
+	height: remsize(300);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	@include mobileM {
+		height: remsize(150);
+	}
+}
+
+.title {
+	margin-bottom: remsize(20);
+}
+
+.container {
+	height: remsize(100);
+	min-width: remsize(500);
+
+	@include mobileL {
+		min-width: remsize(400);
+	}
+
+	@include mobileM {
+		min-width: remsize(350);
+	}
+
+	@include mobileS {
+		min-width: remsize(300);
+	}
+}

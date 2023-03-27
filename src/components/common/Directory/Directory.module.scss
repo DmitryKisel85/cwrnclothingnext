@@ -1,0 +1,13 @@
+@use "styles/media" as *;
+
+.root {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	@include mobileM {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}

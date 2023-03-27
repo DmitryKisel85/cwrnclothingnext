@@ -1,0 +1,51 @@
+@use "styles/mixins" as *;
+@use "styles/colors" as *;
+@use "styles/media" as *;
+
+.root {
+	position: relative;
+	margin: remsize(45) 0;
+
+    @include mobileM {
+        margin: remsize(10) 0;
+    }
+}
+
+.input {
+    background: none;
+	background-color: $white;
+	color: $grey;
+	font-size: remsize(18);
+	padding: remsize(10) remsize(10) remsize(10) remsize(5)
+	display: block;
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid $grey;
+	margin: remsize(25) 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus ~ .label {
+        top: remsize(-14);
+        font-size: remsize(12);
+        color: $black;
+    }
+
+    &[type='password'] {
+        letter-spacing: 0.3em;
+    }
+}
+
+.label {
+    color: $grey;
+    font-size: remsize(16);
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: remsize(5);
+    top: remsize(10);
+    transition: 0.3s ease all;
+}

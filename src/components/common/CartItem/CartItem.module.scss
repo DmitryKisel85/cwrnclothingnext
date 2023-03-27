@@ -1,0 +1,25 @@
+@use "styles/mixins" as *;
+
+.root {
+	width: 100%;
+	display: flex;
+	height: remsize(80);
+	margin-bottom: remsize(15);
+}
+
+.img {
+	width: 30%;
+}
+
+.box {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	padding: remsize(10) remsize(20);
+
+	span {
+		font-size: remsize(16);
+	}
+}

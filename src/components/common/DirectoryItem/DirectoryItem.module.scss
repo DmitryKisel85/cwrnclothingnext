@@ -1,0 +1,74 @@
+@use "styles/mixins" as *;
+@use "styles/colors" as *;
+@use "styles/media" as *;
+
+.root {
+	min-width: 30%;
+	height: remsize(240);
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid black;
+	margin: 0 remsize(7.5) remsize(15);
+	overflow: hidden;
+
+	&:first-child {
+		margin-right: remsize(7.5);
+	}
+
+	&:last-child {
+		margin-left: remsize(7.5);
+	}
+
+	@include hover {
+		cursor: pointer;
+	}
+
+	@include mobileL {
+		min-width: 40%;
+		height: remsize(200);
+	}
+}
+
+.img {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+
+	@include hover {
+		transform: scale(1.1);
+		transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+	}
+}
+
+.box {
+	height: remsize(90);
+	padding: 0 remsize(25);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid $black;
+	background-color: $white;
+	opacity: 0.7;
+	position: absolute;
+
+	@include hover {
+		opacity: 0.9;
+	}
+}
+
+.title {
+	font-weight: bold;
+	margin: 0 remsize(6) 0;
+	font-size: remsize(22);
+	color: $grey;
+	text-transform: uppercase;
+}
+
+.text {
+	font-weight: lighter;
+	font-size: remsize(16);
+}

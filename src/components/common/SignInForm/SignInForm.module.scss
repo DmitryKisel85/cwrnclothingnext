@@ -1,0 +1,21 @@
+@use "styles/mixins" as *;
+@use "styles/media" as *;
+
+.root {
+	display: flex;
+	flex-direction: column;
+	width: remsize(380);
+
+	@include mobileM {
+		width: remsize(300);
+	}
+}
+
+.title {
+	margin: remsize(10) 0;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+}

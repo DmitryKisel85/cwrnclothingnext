@@ -12,9 +12,10 @@ interface IButtonProps {
 	href?: string;
 	disabled?: boolean;
 	className?: string;
+	type?: "submit" | "button";
 }
 
-const Button = ({ onClick, children, isGoogle, isInverted, href, disabled, className }: IButtonProps) => {
+const Button = ({ onClick, children, isGoogle, isInverted, href, disabled, className, type }: IButtonProps) => {
 	const CustomTag = useMemo(() => {
 		if (href) return "a";
 		return "button";
@@ -26,7 +27,8 @@ const Button = ({ onClick, children, isGoogle, isInverted, href, disabled, class
 			onClick={onClick}
 			href={href}
 			disabled={disabled}
-			target={href && "_blank"}>
+			target={href && "_blank"}
+			type={type}>
 			{children}
 		</CustomTag>
 	);

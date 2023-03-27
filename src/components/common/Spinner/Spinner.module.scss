@@ -1,0 +1,31 @@
+@use "styles/mixins" as *;
+@use "styles/media" as *;
+
+.root {
+	height: 60vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	display: inline-block;
+	width: remsize(50);
+	height: remsize(50);
+	border: remsize(3) solid rgba(195, 195, 195, 0.6);
+	border-radius: 50%;
+	border-top-color: #636767;
+	animation: spin 1s ease-in-out infinite;
+	-webkit-animation: spin 1s ease-in-out infinite;
+	@keyframes spin {
+		to {
+			-webkit-transform: rotate(360deg);
+		}
+	}
+	@-webkit-keyframes spin {
+		to {
+			-webkit-transform: rotate(360deg);
+		}
+	}
+}

@@ -1,7 +1,7 @@
 import { memo } from "react";
 
 type ShoppingIconProps = {
-	className: string;
+	className?: string;
 };
 
 const ShoppingIcon = memo(({ className }: ShoppingIconProps) => {

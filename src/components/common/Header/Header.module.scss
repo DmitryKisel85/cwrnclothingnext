@@ -1,0 +1,45 @@
+@use "styles/mixins" as *;
+@use "styles/media" as *;
+
+.root {
+	height: remsize(70);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: remsize(25);
+
+	@include tabletS {
+		height: remsize(60);
+		padding: remsize(10);
+		margin-bottom: remsize(20);
+	}
+}
+
+.logo {
+	height: 100%;
+	width: remsize(70);
+	padding: remsize(25);
+
+	@include tabletS {
+		width: remsize(50);
+		padding: 0;
+	}
+}
+
+.nav {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+
+	@include tabletS {
+		width: 80%;
+	}
+}
+
+.link {
+	font-size: remsize(18);
+	padding: remsize(10) remsize(15);
+	cursor: pointer;
+}

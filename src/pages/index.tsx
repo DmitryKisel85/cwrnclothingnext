@@ -1,10 +1,7 @@
-import React from "react";
-import { Button } from "components/common/Button";
+import { Home } from "components/pages/Home";
 
-export default function Home() {
-	return (
-		<>
-			<Button isInverted>doit</Button>
-		</>
-	);
-}
+const HomePage = () => {
+	return <Home />;
+};
+
+export default HomePage;

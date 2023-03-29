@@ -18,13 +18,15 @@ import Link from "next/link";
 import { Button } from "components/common/Button";
 
 const Header = () => {
+	const currentUser = "";
+
 	// const currentUser = useSelector(selectCurrentUser);
 	// const isCartOpen = useSelector(selectIsCartOpen);
 
 	// const dispatch = useAppDispatch();
 
 	// const signOutUser = () => dispatch(signOutStart());
-
+	const signOutUser = () => console.log("34");
 	return (
 		<div className={s.root}>
 			<Link href='/' className={s.logo}>
@@ -34,14 +36,16 @@ const Header = () => {
 				<Link href='/shop' className={s.link}>
 					<span>SHOP</span>
 				</Link>
-				{/* {currentUser ? (
+				{currentUser ? (
 					<Button className={s.link} onClick={signOutUser}>
 						SIGN OUT
 					</Button>
 				) : (
-					<Link href='/auth'>SIGN IN</Link>
-				)} */}
-				<ShoppingIcon />
+					<Link className={s.link} href='/auth'>
+						SIGN IN
+					</Link>
+				)}
+				<ShoppingIcon className={s.icon} />
 			</div>
 			{/* {isCartOpen && <CartDropdown />} */}
 		</div>

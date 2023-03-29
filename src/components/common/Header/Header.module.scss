@@ -2,23 +2,23 @@
 @use "styles/media" as *;
 
 .root {
-	height: remsize(70);
 	width: 100%;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
-	margin-bottom: remsize(25);
+	padding: remsize(20);
 
 	@include tabletS {
-		height: remsize(60);
 		padding: remsize(10);
-		margin-bottom: remsize(20);
 	}
 }
 
 .logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	height: 100%;
 	width: remsize(70);
-	padding: remsize(25);
 
 	@include tabletS {
 		width: remsize(50);
@@ -32,14 +32,29 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	gap: remsize(20);
 
 	@include tabletS {
 		width: 80%;
 	}
 }
 
+.link,
+.icon,
+.logo {
+	cursor: pointer;
+	transition: transform 0.3s ease;
+	@include hover {
+		transform: scale(1.1);
+	}
+}
+
 .link {
 	font-size: remsize(18);
-	padding: remsize(10) remsize(15);
-	cursor: pointer;
+}
+
+.icon {
+	width: remsize(30);
+	height: remsize(30);
+	margin-bottom: remsize(5);
 }

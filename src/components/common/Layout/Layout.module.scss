@@ -1,0 +1,6 @@
+@use "styles/mixins" as *;
+@use "styles/media" as *;
+
+.root {
+	padding: remsize(20) remsize(40);
+}

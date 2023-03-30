@@ -20,7 +20,7 @@
 		"allowUnreachableCode": false,
 		"baseUrl": "./src",
 		"paths": {
-			"@component/*": ["component/*"],
+			"@components/*": ["components/*"],
 			"@routes/*": ["routes/*"],
 			"@store/*": ["store/*"],
 			"@styles/*": ["styles/*"],

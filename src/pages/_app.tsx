@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<main className={font.className}>
-				<Component {...pageProps} />;
+				<Component {...pageProps} />
 			</main>
 		</>
 	);

@@ -1,14 +1,15 @@
 import Link from "next/link";
 
-import ProductCard from "../ProductCard";
+import { ProductCard } from "components/common/ProductCard";
 
-import { CategoryItem } from "../../store/categories/categoriesTypes";
+// import { CategoryItem } from "../../store/categories/categoriesTypes";
 
 import s from "./CategoryPreview.module.scss";
 
 type CategoryPreviewProps = {
 	title: string;
-	products: CategoryItem[];
+	// products: CategoryItem[];
+	products: any;
 };
 
 const CategoryPreview = ({ title, products }: CategoryPreviewProps) => {

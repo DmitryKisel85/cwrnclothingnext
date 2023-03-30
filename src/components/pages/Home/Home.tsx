@@ -1,10 +1,17 @@
-import { Directory } from "components/common/Directory";
+import { categories } from "components/pages/Home/data";
+import { DirectoryItem } from "components/common/DirectoryItem";
 import Layout from "components/common/Layout";
+
+import s from "./Home.module.scss";
 
 const Home = () => {
 	return (
 		<Layout>
-			<Directory />
+			<div className={s.root}>
+				{categories.map((category) => {
+					return <DirectoryItem key={category.id} category={category} />;
+				})}
+			</div>
 		</Layout>
 	);
 };

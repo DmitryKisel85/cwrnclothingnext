@@ -6,7 +6,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: remsize(20);
+	padding: remsize(40) remsize(10);
 
 	@include tabletS {
 		padding: remsize(10);
@@ -16,7 +16,6 @@
 .logo {
 	display: flex;
 	align-items: center;
-	justify-content: center;
 	height: 100%;
 	width: remsize(70);
 
